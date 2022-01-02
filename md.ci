@@ -1,0 +1,12 @@
+mainmodule md_charm {
+readonly CProxy_Control mainControl;
+mainchare Control{
+entry Control(CkArgMsg *m);
+entry void finishOneStep(double, double);
+};
+array [1D] Patch {
+entry Patch(void);
+entry void doOneStep(void);
+entry void getAtomsFromAPatch(int atomsCnt, AtomInfo recvAtoms[atomsCnt]);
+};
+};
